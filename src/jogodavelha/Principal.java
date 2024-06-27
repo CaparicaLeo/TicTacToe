@@ -26,6 +26,7 @@ public class Principal {
                 case 2:
                     break;
                 case 3:
+                    System.out.println("Saindo...");
                     break;
             }
         }while(opcao!=3);

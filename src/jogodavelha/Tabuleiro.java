@@ -1,10 +1,9 @@
 package jogodavelha;
 
 public class Tabuleiro {
-    private final int tamanho;
+    private static final int tamanho = 3;
     private final String[][] matriz;
     public Tabuleiro(int tamanho){
-        this.tamanho = tamanho;
         matriz = new String[tamanho][tamanho];
         for(int i=0;i<tamanho;i++){
             for(int j=0;j<tamanho;j++){
