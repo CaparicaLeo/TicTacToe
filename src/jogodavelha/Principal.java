@@ -16,14 +16,21 @@ public class Principal {
         System.out.println("Selecione sua Opção!");
         do
         {
+            System.out.println("*****************");
+            System.out.println("*               *");
+            System.out.println("* JOGO DA VELHA *");
+            System.out.println("*               *");
+            System.out.println("*****************");
             System.out.println("1. JOGAR");
-            System.out.println("2. PONTUAÇÃO GERAL.");
-            System.out.println("3. SAIR\n");
+            System.out.println("2. JOGAR CONTRA BOT");
+            System.out.println("3. PONTUAÇÃO GERAL.");
+            System.out.println("4. SAIR\n");
             System.out.print("Insira: ");
             Scanner scan = new Scanner(System.in);
             opcao = scan.nextInt();
             scan.nextLine();
             switch (opcao){
+
                 case 1:
                     Jogo jogo = new Jogo();
                     break;
