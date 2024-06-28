@@ -11,8 +11,7 @@ public class Principal {
     }
     public static void menu(){
         int opcao;
-        System.out.println("JOGO DA VELHA!");
-        System.out.println("Feito por Leonardo Caparica e Lucas Cogrossi.");
+
         System.out.println("Selecione sua Opção!");
         do
         {
@@ -24,7 +23,8 @@ public class Principal {
             System.out.println("1. JOGAR");
             System.out.println("2. JOGAR CONTRA BOT");
             System.out.println("3. PONTUAÇÃO GERAL.");
-            System.out.println("4. SAIR\n");
+            System.out.println("4. CREDITOS.");
+            System.out.println("5. SAIR\n");
             System.out.print("Insira: ");
             Scanner scan = new Scanner(System.in);
             opcao = scan.nextInt();
