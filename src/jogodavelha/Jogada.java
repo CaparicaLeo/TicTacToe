@@ -3,34 +3,22 @@ package jogodavelha;
 public class Jogada {
     private int x;
     private int y;
-    private Jogador jogador;
+    private String simbolo;
 
-    public Jogada(Jogador jogador, int x, int y){
-        this.jogador = jogador;
+    public Jogada(int x, int y, String simbolo){
         this.x = x;
         this.y = y;
+        this.simbolo = simbolo;
     }
-    public Jogador getJogador() {
-        return jogador;
-    }
-
-    public void setJogador(Jogador jogador) {
-        this.jogador = jogador;
-    }
-
     public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
+        return this.x;
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public String getSimbolo(){
+        return this.simbolo;
     }
 }
