@@ -60,6 +60,7 @@ public class Jogo {
 
                 if (!jogadaValida(jogadorAtual.getJogada())) {
                     System.out.println("Jogada inválida. Tente novamente.");
+
                 } else {
                     mesa.receberJogada(jogadorAtual.getJogada());
                 }
@@ -75,7 +76,8 @@ public class Jogo {
                 System.out.println("Empate!");
                 jogoContinua = false;
             } else {
-                alternarJogador();
+
+                 alternarJogador();
             }
         }
     }
@@ -125,10 +127,6 @@ public class Jogo {
     }
 
     private boolean jogadaValida(Jogada jogadaAtual){
-            if (!mesa.getMatriz()[jogadaAtual.getX()][jogadaAtual.getY()].equals(" ")) {
-            return false;
-        } else {
-            return true;
-        }
+        return mesa.getMatriz()[jogadaAtual.getX()][jogadaAtual.getY()].equals(" ");
     }
 }
