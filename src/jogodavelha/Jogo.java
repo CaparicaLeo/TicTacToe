@@ -45,27 +45,28 @@ public class Jogo {
             mesa.imprimeTabuleiro();
             System.out.println("Vez do jogador: " + jogadorAtual.getNome() + " (" + jogadorAtual.getSimbolo() + ")");
 
+            boolean jogadaValida;
             do {
                 System.out.print("Insira a linha (A-C): ");
-
                 char linha = scanner.next().charAt(0);
                 if (Character.isLowerCase(linha)) {
                     linha = Character.toUpperCase(linha);
                 }
 
-                int trueLinha = ((int) linha) - 65;
-                System.out.print("Insira a coluna (0-2): ");
+                int trueLinha = linha - 'A';
+                System.out.print("Insira a coluna (1-3): ");
                 int coluna = scanner.nextInt();
-                jogadorAtual.realizarJogada(trueLinha, coluna);
 
-                if (!jogadaValida(jogadorAtual.getJogada())) {
+                Jogada jogadaAtual = new Jogada(trueLinha, coluna - 1, jogadorAtual.getSimbolo());
+                jogadaValida = jogadaValida(jogadaAtual);
+
+                if (!jogadaValida) {
                     System.out.println("Jogada inválida. Tente novamente.");
-
                 } else {
-                    mesa.receberJogada(jogadorAtual.getJogada());
+                    mesa.receberJogada(jogadaAtual);
                 }
 
-            } while (jogadaValida(jogadorAtual.getJogada()));
+            } while (!jogadaValida);
 
             if (vitoria()) {
                 mesa.imprimeTabuleiro();
@@ -76,8 +77,7 @@ public class Jogo {
                 System.out.println("Empate!");
                 jogoContinua = false;
             } else {
-
-                 alternarJogador();
+                alternarJogador();
             }
         }
     }
@@ -127,6 +127,12 @@ public class Jogo {
     }
 
     private boolean jogadaValida(Jogada jogadaAtual){
-        return mesa.getMatriz()[jogadaAtual.getX()][jogadaAtual.getY()].equals(" ");
+        int x = jogadaAtual.getX();
+        int y = jogadaAtual.getY();
+        // Verificar se a jogada está dentro dos limites da matriz
+        if (x < 0 || x >= mesa.getTamanho() || y < 0 || y >= mesa.getTamanho()) {
+            return false;
+        }
+        return mesa.getMatriz()[x][y].equals(" ");
     }
 }

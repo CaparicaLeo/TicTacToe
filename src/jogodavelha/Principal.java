@@ -36,7 +36,7 @@ public class Principal {
                     break;
                 case 2:
                     break;
-                case 3:
+                case 5:
                     System.out.println("Saindo...");
                     break;
             }

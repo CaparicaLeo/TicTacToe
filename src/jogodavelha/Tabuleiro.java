@@ -25,7 +25,7 @@ public class Tabuleiro {
             System.out.println();
             if (i < tamanho - 1) System.out.println("  -----------");
         }
-        System.out.println("   0   1   2");
+        System.out.println("   1   2   3");
     }
     public void receberJogada(Jogada jogada){
         this.matriz[jogada.getX()][jogada.getY()]= jogada.getSimbolo();
