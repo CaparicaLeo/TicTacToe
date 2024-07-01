@@ -1,6 +1,11 @@
 ### TODO LIST
 
-- [ ] coisa 1
-- [ ] coisa 2
-- [ ] coisa 3
+- [ ] Diagrama de Classes
+- [ ] Tratamento de Exceções com no minimo duas!
+- [ ] Criação da Classe Console
+- [ ] Metodo para jogar novamente
+- [ ] Todo o Package armazenamento
+- [ ] Criar a funcionalidade extra, vulgo BOT
+- [ ] Documentação
+      
 
