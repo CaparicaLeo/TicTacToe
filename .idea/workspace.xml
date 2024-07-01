@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e20a4c93-c39c-4730-8c8f-d72176a58615" name="Changes" comment="">
+    <list default="true" id="e20a4c93-c39c-4730-8c8f-d72176a58615" name="Changes" comment="slagitgi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +33,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Principal.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jogodavelha.Principal" />
@@ -77,7 +72,20 @@
       <option name="presentableId" value="Default" />
       <updated>1719508170807</updated>
     </task>
+    <task id="LOCAL-00001" summary="sla">
+      <option name="closed" value="true" />
+      <created>1719575405827</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719575405827</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sla" />
+    <option name="LAST_COMMIT_MESSAGE" value="sla" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
