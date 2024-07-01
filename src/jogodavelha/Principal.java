@@ -38,7 +38,7 @@ public class Principal {
                     break;
                 case 5:
                     System.out.println("Saindo...");
-                    break;
+                    return;
             }
         }while(opcao!=3);
         scan.close();
