@@ -11,6 +11,7 @@ public class Tabuleiro {
             }
         }
     }
+    //imprime o tabuleiro para o jogo
     public void imprimeTabuleiro()
     {
         int i;
@@ -25,14 +26,14 @@ public class Tabuleiro {
             System.out.println();
             if (i < tamanho - 1) System.out.println("  -----------");
         }
-        System.out.println("   1   2   3");
+        System.out.println("   0   1   2");
     }
     public void receberJogada(Jogada jogada){
         this.matriz[jogada.getX()][jogada.getY()]= jogada.getSimbolo();
 
     }
     public String[][] getMatriz() {
-        return matriz;
+        return this.matriz;
     }
 
     public int getTamanho() {
