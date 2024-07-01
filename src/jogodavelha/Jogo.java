@@ -72,6 +72,7 @@ public class Jogo {
                 mesa.imprimeTabuleiro();
                 System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
                 jogoContinua = false;
+
             } else if (empate()) {
                 mesa.imprimeTabuleiro();
                 System.out.println("Empate!");
@@ -80,6 +81,7 @@ public class Jogo {
                 alternarJogador();
             }
         }
+        System.out.println("Jogador novamente? (S/N)");
     }
 
     public boolean vitoria() {

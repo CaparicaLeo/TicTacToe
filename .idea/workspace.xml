@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e20a4c93-c39c-4730-8c8f-d72176a58615" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/JogadaValida.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +86,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="slagitgi" />

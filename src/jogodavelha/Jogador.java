@@ -10,6 +10,7 @@ public class Jogador{
         this.nome = nome;
         this.pontuacao = 0;
     }
+
     public void setPontuacao(int pontuacao){
         this.pontuacao = pontuacao;
     }

@@ -6,13 +6,14 @@ package jogodavelha;
 //import entradadados.*;
 import java.util.Scanner;
 public class Principal {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         menu();
     }
+
     public static void menu(){
         int opcao;
 
-        System.out.println("Selecione sua Opção!");
         Scanner scan = new Scanner(System.in);
         do
         {
@@ -27,10 +28,11 @@ public class Principal {
             System.out.println("4. CREDITOS.");
             System.out.println("5. SAIR\n");
             System.out.print("Insira: ");
+
             opcao = scan.nextInt();
             scan.nextLine();
-            switch (opcao) {
 
+            switch (opcao) {
                 case 1:
                     Jogo jogo = new Jogo();
                     break;
@@ -40,7 +42,7 @@ public class Principal {
                     System.out.println("Saindo...");
                     return;
             }
-        }while(opcao!=3);
+        }while(opcao != 3);
         scan.close();
 
     }
