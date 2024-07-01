@@ -46,11 +46,17 @@ public class Jogo {
             System.out.println("Vez do jogador: " + jogadorAtual.getNome() + " (" + jogadorAtual.getSimbolo() + ")");
 
             do {
-                System.out.print("Insira a linha (0-2): ");
-                int linha = scanner.nextInt();
+                System.out.print("Insira a linha (A-C): ");
+
+                char linha = scanner.next().charAt(0);
+                if (Character.isLowerCase(linha)) {
+                    linha = Character.toUpperCase(linha);
+                }
+
+                int trueLinha = ((int) linha) - 65;
                 System.out.print("Insira a coluna (0-2): ");
                 int coluna = scanner.nextInt();
-                jogadorAtual.realizarJogada(linha, coluna);
+                jogadorAtual.realizarJogada(trueLinha, coluna);
 
                 if (!jogadaValida(jogadorAtual.getJogada())) {
                     System.out.println("Jogada inválida. Tente novamente.");
@@ -119,7 +125,7 @@ public class Jogo {
     }
 
     private boolean jogadaValida(Jogada jogadaAtual){
-        if (!mesa.getMatriz()[jogadaAtual.getX()][jogadaAtual.getY()].equals(" ")) {
+            if (!mesa.getMatriz()[jogadaAtual.getX()][jogadaAtual.getY()].equals(" ")) {
             return false;
         } else {
             return true;

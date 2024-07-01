@@ -11,17 +11,21 @@ public class Tabuleiro {
             }
         }
     }
-    public void imprimeTabuleiro(){
-        System.out.println("  0 1 2");
-        for (int i = 0; i < tamanho; i++) {
-            System.out.print(i + " ");
+    public void imprimeTabuleiro()
+    {
+        int i;
+        for (i = 0; i < tamanho; i++) {
+            char ch = (char) (i + 65);
+            System.out.print(ch + " ");
+            System.out.print(" ");
             for (int j = 0; j < tamanho; j++) {
                 System.out.print(matriz[i][j]);
-                if (j < tamanho - 1) System.out.print("|");
+                if (j < tamanho - 1) System.out.print(" | ");
             }
             System.out.println();
-            if (i < tamanho - 1) System.out.println("  -----");
+            if (i < tamanho - 1) System.out.println("  -----------");
         }
+        System.out.println("   0   1   2");
     }
     public void receberJogada(Jogada jogada){
         this.matriz[jogada.getX()][jogada.getY()]= jogada.getSimbolo();

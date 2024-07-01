@@ -1,6 +1,7 @@
 package jogodavelha;
 
 public class Jogada {
+
     private int x;
     private int y;
     private String simbolo;
