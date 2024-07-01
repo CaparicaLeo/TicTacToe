@@ -38,6 +38,12 @@ public class Principal {
                     break;
                 case 2:
                     break;
+                case 4:
+                    System.out.println("JOGO DA VELHA");
+                    System.out.println("Criado por Lucas Machado Cogrossi");
+                    System.out.println("                &                ");
+                    System.out.println("Leonardo Brzezinski Caparica de Almeida");
+                    break;
                 case 5:
                     System.out.println("Saindo...");
                     return;
