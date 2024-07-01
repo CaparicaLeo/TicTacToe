@@ -13,6 +13,7 @@ public class Principal {
         int opcao;
 
         System.out.println("Selecione sua Opção!");
+        Scanner scan = new Scanner(System.in);
         do
         {
             System.out.println("*****************");
@@ -26,10 +27,9 @@ public class Principal {
             System.out.println("4. CREDITOS.");
             System.out.println("5. SAIR\n");
             System.out.print("Insira: ");
-            Scanner scan = new Scanner(System.in);
             opcao = scan.nextInt();
             scan.nextLine();
-            switch (opcao){
+            switch (opcao) {
 
                 case 1:
                     Jogo jogo = new Jogo();
@@ -40,7 +40,8 @@ public class Principal {
                     System.out.println("Saindo...");
                     break;
             }
-            scan.close();
         }while(opcao!=3);
+        scan.close();
+
     }
 }
