@@ -50,6 +50,7 @@ public class Principal {
             }
         }while(opcao != 3);
         scan.close();
+        // Merge incoming
 
     }
 }
