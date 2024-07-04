@@ -82,6 +82,7 @@ public class Jogo{
             }
         }
         System.out.println("Jogador novamente? (S/N)");
+        Principal.menu();
     }
 
     public boolean vitoria() {
