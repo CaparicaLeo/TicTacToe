@@ -39,7 +39,6 @@ public class Principal {
                     break;
                 case 2:
                     jogo = new Jogo();
-                    jogo = new Jogo();
                     break;
                 case 4:
                     System.out.println("JOGO DA VELHA");

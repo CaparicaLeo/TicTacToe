@@ -6,13 +6,17 @@ public class SinglePlayer extends Jogo{
     Jogador jogadorAtual;
     public SinglePlayer(){
         inicializaJogadores();
+        inicializaJogo();
+        jogar();
     }
+    @Override
     public void inicializaJogadores(){
         Scanner scan = new Scanner(System.in);
         System.out.println("Insira seu nome: ");
         jogador1 = new Jogador(scan.nextLine());
         computador = new Bot();
     }
+    @Override
     public void inicializaJogo() {
         Random random = new Random();
         int aleatorio = random.nextInt(2) + 1;
@@ -26,6 +30,7 @@ public class SinglePlayer extends Jogo{
             jogador1.determinaSimbolo("O");
         }
     }
+    @Override
     public void jogar(){
         Scanner scanner = new Scanner(System.in);
         boolean jogoContinua = true;
@@ -76,5 +81,24 @@ public class SinglePlayer extends Jogo{
                 alternarJogador();
             }
         }
+    }
+
+    @Override
+    protected void alternarJogador() {
+        super.alternarJogador();
+    }
+
+    @Override
+    public boolean vitoria() {
+        return super.vitoria();
+    }
+
+    @Override
+    public boolean empate() {
+        return super.empate();
+    }
+    @Override
+    protected boolean jogadaValida(Jogada jogadaAtual) {
+        return super.jogadaValida(jogadaAtual);
     }
 }
