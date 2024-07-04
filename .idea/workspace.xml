@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
 
+    <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" afterDir="false" />
+    </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,17 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Principal.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "caparica",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe",
-    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BOT&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="jogodavelha" />
@@ -71,7 +80,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e20a4c93-c39c-4730-8c8f-d72176a58615" name="Changes" comment="" />
+      <changelist id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="" />
       <created>1719508170807</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -95,6 +104,17 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="slagitgi" />

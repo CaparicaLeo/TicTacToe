@@ -12,7 +12,7 @@ public class Bot extends Jogador implements Jogadores{
     public void realizarJogada(){
         Random aleatorio = new Random();
         int x = aleatorio.nextInt(3);
-        int y = aleatorio.nextInt(3)+1;
+        int y = aleatorio.nextInt(3);
         this.jogada = new Jogada(x,y,this.simbolo);
     }
     public String getSimbolo() {
