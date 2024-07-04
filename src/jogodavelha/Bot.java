@@ -1,12 +1,13 @@
 package jogodavelha;
 import java.util.Random;
 public class Bot extends Jogador implements Jogadores{
-    private String nome;
+    private final String nome;
     private String simbolo;
     private Jogada jogada;
 
     public Bot(){
         super("Robo");
+        this.nome = "Robo";
     }
     public void realizarJogada(){
         Random aleatorio = new Random();
