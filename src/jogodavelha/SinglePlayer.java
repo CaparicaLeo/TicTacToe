@@ -68,6 +68,7 @@ public class SinglePlayer extends Jogo{
                 }
             } while (!jogadaValida);
         }while(jogoContinua());
+
         Principal.menu();
     }
 

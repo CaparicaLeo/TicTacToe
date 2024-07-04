@@ -7,7 +7,7 @@ public class Jogo{
     protected Tabuleiro mesa = new Tabuleiro();
     protected Jogador jogador1;
     protected Jogador jogador2;
-    Jogador jogadorAtual;
+    protected Jogador jogadorAtual;
 
     public Jogo() {
         inicializaJogadores();
