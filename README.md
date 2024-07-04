@@ -5,7 +5,7 @@
 - [ ] Criação da Classe Console
 - [ ] Metodo para jogar novamente
 - [ ] Todo o Package armazenamento
-- [ ] Criar a funcionalidade extra, vulgo BOT
+- [feito ] Criar a funcionalidade extra, vulgo BOT
 - [ ] Documentação
       
 
