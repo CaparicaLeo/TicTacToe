@@ -3,11 +3,11 @@ package jogodavelha;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Jogo {
-    public Tabuleiro mesa = new Tabuleiro();
-    public Jogador jogador1;
-    public Jogador jogador2;
-    public Jogador jogadorAtual;
+public class Jogo{
+    protected Tabuleiro mesa = new Tabuleiro();
+    protected Jogador jogador1;
+    protected Jogador jogador2;
+    Jogador jogadorAtual;
 
     public Jogo() {
         inicializaJogadores();
@@ -124,11 +124,11 @@ public class Jogo {
         return count == 9;
     }
 
-    private void alternarJogador() {
+    protected void alternarJogador() {
         jogadorAtual = (jogadorAtual == jogador1) ? jogador2 : jogador1;
     }
 
-    private boolean jogadaValida(Jogada jogadaAtual){
+    protected boolean jogadaValida(Jogada jogadaAtual){
         int x = jogadaAtual.getX();
         int y = jogadaAtual.getY();
         // Verificar se a jogada está dentro dos limites da matriz
