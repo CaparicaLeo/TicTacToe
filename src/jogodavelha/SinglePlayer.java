@@ -1,6 +1,7 @@
 package jogodavelha;
+import entradadados.Console;
+
 import java.util.Random;
-import java.util.Scanner;
 public class SinglePlayer extends Jogo{
     private Bot computador;
     private Jogador jogadorAtual;
@@ -12,9 +13,7 @@ public class SinglePlayer extends Jogo{
     }
     @Override
     public void inicializaJogadores(){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Insira seu nome: ");
-        this.jogador1 = new Jogador(scan.nextLine());
+        this.jogador1 = new Jogador(Console.lerString("Insira seu nome: "));
         this.computador = new Bot();
     }
     @Override
@@ -33,7 +32,6 @@ public class SinglePlayer extends Jogo{
     }
     @Override
     public void jogar(){
-        Scanner scanner = new Scanner(System.in);
         Jogada jogadaAtual;
 
         do {
@@ -46,15 +44,13 @@ public class SinglePlayer extends Jogo{
                 else{
                     mesa.imprimeTabuleiro();
                     System.out.println("Vez do jogador: " + this.jogadorAtual.getNome() + " (" + this.jogadorAtual.getSimbolo() + ")");
-                    System.out.print("Insira a linha (A-C): ");
-                    char linha = scanner.next().charAt(0);
+                    char linha = Console.lerChar("Insira a linha (A-C): ");
                     if (Character.isLowerCase(linha)) {
                         linha = Character.toUpperCase(linha);
                     }
 
                     int trueLinha = linha - 'A';
-                    System.out.print("Insira a coluna (1-3): ");
-                    int coluna = scanner.nextInt();
+                    int coluna = Console.lerInt("Insira a coluna (1-3): ");
 
                     jogadaAtual = new Jogada(trueLinha, coluna - 1, jogadorAtual.getSimbolo());
                 }

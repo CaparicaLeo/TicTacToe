@@ -1,8 +1,8 @@
 package jogodavelha;
 
-import java.util.Random;
-import java.util.Scanner;
+import entradadados.Console;
 
+import java.util.Random;
 public class Jogo{
     protected Tabuleiro mesa = new Tabuleiro();
     protected Jogador jogador1;
@@ -16,11 +16,8 @@ public class Jogo{
     }
 
     public void inicializaJogadores(){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Insira o nome do primeiro jogador: ");
-        jogador1 = new Jogador(scan.nextLine());
-        System.out.print("Insira o nome do segundo jogador: ");
-        jogador2 = new Jogador(scan.nextLine());
+        jogador1 = new Jogador(Console.lerString("Insira o nome do primeiro jogador: "));
+        jogador2 = new Jogador(Console.lerString("Insira o nome do segundo jogador: "));
     }
 
     public void inicializaJogo() {
@@ -38,7 +35,6 @@ public class Jogo{
     }
 
     public void jogar() {
-        Scanner scanner = new Scanner(System.in);
         boolean jogoContinua = true;
 
         while (jogoContinua) {
@@ -47,15 +43,13 @@ public class Jogo{
 
             boolean jogadaValida;
             do {
-                System.out.print("Insira a linha (A-C): ");
-                char linha = scanner.next().charAt(0);
+                char linha = Console.lerChar("Insira a linha (A-C): ");
                 if (Character.isLowerCase(linha)) {
                     linha = Character.toUpperCase(linha);
                 }
 
                 int trueLinha = linha - 'A';
-                System.out.print("Insira a coluna (1-3): ");
-                int coluna = scanner.nextInt();
+                int coluna = Console.lerInt("Insira a coluna (1-3): ");
 
                 Jogada jogadaAtual = new Jogada(trueLinha, coluna - 1, jogadorAtual.getSimbolo());
                 jogadaValida = jogadaValida(jogadaAtual);
