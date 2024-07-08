@@ -1,18 +1,22 @@
 package jogodavelha;
-
 import entradadados.Console;
-
 import java.util.Random;
 public class Jogo{
-    protected Tabuleiro mesa = new Tabuleiro();
+    protected Tabuleiro mesa;
     protected Jogador jogador1;
     protected Jogador jogador2;
     protected Jogador jogadorAtual;
+    protected char novamente;
 
     public Jogo() {
-        inicializaJogadores();
-        inicializaJogo();
-        jogar();
+        do{
+            mesa = new Tabuleiro();
+            inicializaJogadores();
+            inicializaJogo();
+            jogar();
+            novamente = Console.lerChar("Jogador novamente? (S/N): ");
+        }while(Character.toUpperCase(novamente)!= 'N');
+        Principal.menu();
     }
 
     public void inicializaJogadores(){
@@ -75,8 +79,6 @@ public class Jogo{
                 alternarJogador();
             }
         }
-        System.out.println("Jogador novamente? (S/N)");
-        Principal.menu();
     }
 
     public boolean vitoria() {

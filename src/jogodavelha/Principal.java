@@ -27,7 +27,7 @@ public class Principal {
             System.out.println("4. CREDITOS.");
             System.out.println("5. SAIR\n");
 
-            opcao = Console.lerInt("Insira:");
+            opcao = Console.lerInt("Insira: ");
             switch (opcao) {
                 case 1:
                     jogo = new SinglePlayer();
