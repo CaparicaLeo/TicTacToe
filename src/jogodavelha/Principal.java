@@ -14,8 +14,6 @@ public class Principal {
     public static void menu(){
         int opcao;
         Jogo jogo;
-
-        Scanner scan = new Scanner(System.in);
         do
         {
             System.out.println("*****************");
@@ -28,11 +26,8 @@ public class Principal {
             System.out.println("3. PONTUAÇÃO GERAL.");
             System.out.println("4. CREDITOS.");
             System.out.println("5. SAIR\n");
-            System.out.print("Insira: ");
 
-            opcao = scan.nextInt();
-            scan.nextLine();
-
+            opcao = Console.lerInt("Insira:");
             switch (opcao) {
                 case 1:
                     jogo = new SinglePlayer();
@@ -40,18 +35,23 @@ public class Principal {
                 case 2:
                     jogo = new Jogo();
                     break;
+                case 3:
+                    System.out.println("Pontuação a ser desenvolvida!");
+                    break;
                 case 4:
-                    System.out.println("JOGO DA VELHA");
-                    System.out.println("Criado por Lucas Machado Cogrossi");
-                    System.out.println("                &                ");
-                    System.out.println("Leonardo Brzezinski Caparica de Almeida");
+                    creditos();
                     break;
                 case 5:
                     System.out.println("Saindo...");
                     return;
             }
-        }while(opcao != 3);
-        scan.close();
+        }while(opcao != 5);
         // Merge incoming
+    }
+    public static void creditos(){
+        System.out.println("JOGO DA VELHA");
+        System.out.println("Criado por Lucas Machado Cogrossi");
+        System.out.println("                &                ");
+        System.out.println("Leonardo Brzezinski Caparica de Almeida");
     }
 }
