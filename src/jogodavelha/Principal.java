@@ -5,15 +5,17 @@ package jogodavelha;
 import armazenamento.*;
 import entradadados.Console;
 import java.util.Scanner;
+
 public class Principal {
 
     public static void main(String[] args) {
         menu();
     }
 
-    public static void menu(){
+    public static void menu() {
         int opcao;
         Jogo jogo;
+
         do
         {
             System.out.println("*****************");
@@ -45,10 +47,10 @@ public class Principal {
                     System.out.println("Saindo...");
                     return;
             }
-        }while(opcao != 5);
-        // Merge incoming
+        } while(opcao != 5);
     }
-    public static void creditos(){
+
+    public static void creditos() {
         System.out.println("JOGO DA VELHA");
         System.out.println("Criado por Lucas Machado Cogrossi");
         System.out.println("                &                ");

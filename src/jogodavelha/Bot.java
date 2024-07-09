@@ -1,20 +1,23 @@
 package jogodavelha;
 import java.util.Random;
-public class Bot extends Jogador implements Jogadores{
+
+public class Bot extends Jogador implements Jogadores {
     private final String nome;
     private String simbolo;
     private Jogada jogada;
 
-    public Bot(){
+    public Bot() {
         super("Robo");
         this.nome = "Robo";
     }
-    public void realizarJogada(){
+
+    public void realizarJogada() {
         Random aleatorio = new Random();
         int x = aleatorio.nextInt(3);
         int y = aleatorio.nextInt(3);
         this.jogada = new Jogada(x,y,this.simbolo);
     }
+
     public String getSimbolo() {
         return simbolo;
     }

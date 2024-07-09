@@ -2,17 +2,18 @@ package jogodavelha;
 import entradadados.Console;
 
 import java.util.Random;
-public class SinglePlayer extends Jogo{
+
+public class SinglePlayer extends Jogo {
     private Bot computador;
     private Jogador jogadorAtual;
 
-    public SinglePlayer(){
+    public SinglePlayer() {
         this.inicializaJogadores();
         this.inicializaJogo();
         this.jogar();
     }
     @Override
-    public void inicializaJogadores(){
+    public void inicializaJogadores() {
         this.jogador1 = new Jogador(Console.lerString("Insira seu nome: "));
         this.computador = new Bot();
     }
@@ -31,20 +32,23 @@ public class SinglePlayer extends Jogo{
         }
     }
     @Override
-    public void jogar(){
+    public void jogar() {
         Jogada jogadaAtual;
 
-        do {
+        do
+        {
             boolean jogadaValida;
-            do {
-                if(this.jogadorAtual.getClass() == this.computador.getClass()){
+            do
+            {
+                if (this.jogadorAtual.getClass() == this.computador.getClass()) {
                     this.computador.realizarJogada();
                     jogadaAtual = new Jogada(this.jogadorAtual.getJogada().getX(),this.jogadorAtual.getJogada().getY()-1, this.jogadorAtual.getSimbolo());
                 }
-                else{
+                else {
                     mesa.imprimeTabuleiro();
                     System.out.println("Vez do jogador: " + this.jogadorAtual.getNome() + " (" + this.jogadorAtual.getSimbolo() + ")");
                     char linha = Console.lerChar("Insira a linha (A-C): ");
+
                     if (Character.isLowerCase(linha)) {
                         linha = Character.toUpperCase(linha);
                     }
@@ -62,9 +66,8 @@ public class SinglePlayer extends Jogo{
                 } else {
                     mesa.receberJogada(jogadaAtual);
                 }
-            } while (!jogadaValida);
-        }while(jogoContinua());
-
+            } while(!jogadaValida);
+        } while(jogoContinua());
         Principal.menu();
     }
 
@@ -98,7 +101,6 @@ public class SinglePlayer extends Jogo{
         } else if (tabuleiro[0][2].equals(simbolo) && tabuleiro[1][1].equals(simbolo) && tabuleiro[2][0].equals(simbolo)) {
             return true;
         }
-
         return false;
     }
 
@@ -106,7 +108,8 @@ public class SinglePlayer extends Jogo{
     public boolean empate() {
         return super.empate();
     }
-    public boolean jogoContinua(){
+
+    public boolean jogoContinua() {
         if (vitoria()) {
             mesa.imprimeTabuleiro();
             System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
