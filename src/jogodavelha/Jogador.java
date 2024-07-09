@@ -10,10 +10,6 @@ public class Jogador implements Jogadores {
         this.nome = nome;
         this.pontuacao = 0;
     }
-
-    public void setPontuacao(int pontuacao){
-        this.pontuacao = pontuacao;
-    }
     public int getPontuacao() {
         return pontuacao;
     }
@@ -22,9 +18,6 @@ public class Jogador implements Jogadores {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public String getSimbolo() {
         return simbolo;
@@ -33,11 +26,6 @@ public class Jogador implements Jogadores {
     @Override
     public void determinaSimbolo(String simbolo){
         this.simbolo = simbolo;
-    }
-
-    public Jogada realizarJogada(int x, int y) {
-        this.jogada = new Jogada(x,y,this.simbolo);
-        return this.jogada;
     }
 
     public Jogada getJogada() {
