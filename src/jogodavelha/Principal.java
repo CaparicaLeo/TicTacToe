@@ -49,13 +49,16 @@ public class Principal {
 
     public static void creditos() {
         int op;
+        System.out.println("JOGO DA VELHA");
+        System.out.println("Criado por Lucas Machado Cogrossi");
+        System.out.println("                &                ");
+        System.out.println("Leonardo Brzezinski Caparica de Almeida\n");
         do{
-            System.out.println("JOGO DA VELHA");
-            System.out.println("Criado por Lucas Machado Cogrossi");
-            System.out.println("                &                ");
-            System.out.println("Leonardo Brzezinski Caparica de Almeida\n");
             op = Console.lerInt("Pressione 1 para sair: ");
-        }while(op!= 1 );
+            if(op!=1){
+                System.out.println("\nOPCAO INVALIDA!\n");
+            }
+        }while(op!= 1);
     }
 
 }
