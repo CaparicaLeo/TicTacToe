@@ -7,15 +7,12 @@ import entradadados.Console;
 import java.util.Scanner;
 
 public class Principal {
-
     public static void main(String[] args) {
         menu();
     }
-
     public static void menu() {
         int opcao;
         Jogo jogo;
-
         do
         {
             System.out.println("*****************");
@@ -51,9 +48,14 @@ public class Principal {
     }
 
     public static void creditos() {
-        System.out.println("JOGO DA VELHA");
-        System.out.println("Criado por Lucas Machado Cogrossi");
-        System.out.println("                &                ");
-        System.out.println("Leonardo Brzezinski Caparica de Almeida");
+        int op;
+        do{
+            System.out.println("JOGO DA VELHA");
+            System.out.println("Criado por Lucas Machado Cogrossi");
+            System.out.println("                &                ");
+            System.out.println("Leonardo Brzezinski Caparica de Almeida\n");
+            op = Console.lerInt("Pressione 1 para sair: ");
+        }while(op!= 1 );
     }
+
 }
