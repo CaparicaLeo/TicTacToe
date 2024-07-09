@@ -1,7 +1,8 @@
 package jogodavelha;
 import entradadados.Console;
 import java.util.Random;
-public class Jogo{
+
+public class Jogo {
     protected Tabuleiro mesa;
     protected Jogador jogador1;
     protected Jogador jogador2;
@@ -9,17 +10,19 @@ public class Jogo{
     protected char novamente;
 
     public Jogo() {
-        do{
+        do
+        {
             mesa = new Tabuleiro();
             inicializaJogadores();
             inicializaJogo();
             jogar();
             novamente = Console.lerChar("Jogador novamente? (S/N): ");
-        }while(Character.toUpperCase(novamente)!= 'N');
+
+        } while(Character.toUpperCase(novamente)!= 'N');
         Principal.menu();
     }
 
-    public void inicializaJogadores(){
+    public void inicializaJogadores() {
         jogador1 = new Jogador(Console.lerString("Insira o nome do primeiro jogador: "));
         jogador2 = new Jogador(Console.lerString("Insira o nome do segundo jogador: "));
     }
@@ -27,6 +30,7 @@ public class Jogo{
     public void inicializaJogo() {
         Random random = new Random();
         int aleatorio = random.nextInt(2) + 1;
+
         if (aleatorio == 1) {
             jogador1.determinaSimbolo("X");
             jogadorAtual = jogador1;
@@ -46,7 +50,8 @@ public class Jogo{
             System.out.println("Vez do jogador: " + jogadorAtual.getNome() + " (" + jogadorAtual.getSimbolo() + ")");
 
             boolean jogadaValida;
-            do {
+            do
+            {
                 char linha = Console.lerChar("Insira a linha (A-C): ");
                 if (Character.isLowerCase(linha)) {
                     linha = Character.toUpperCase(linha);
@@ -64,7 +69,7 @@ public class Jogo{
                     mesa.receberJogada(jogadaAtual);
                 }
 
-            } while (!jogadaValida);
+            } while(!jogadaValida);
 
             if (vitoria()) {
                 mesa.imprimeTabuleiro();
@@ -75,6 +80,7 @@ public class Jogo{
                 mesa.imprimeTabuleiro();
                 System.out.println("Empate!");
                 jogoContinua = false;
+
             } else {
                 alternarJogador();
             }
@@ -105,12 +111,12 @@ public class Jogo{
         } else if (tabuleiro[0][2].equals(simbolo) && tabuleiro[1][1].equals(simbolo) && tabuleiro[2][0].equals(simbolo)) {
             return true;
         }
-
         return false;
     }
 
     public boolean empate() {
         int count = 0;
+
         for (int i = 0; i < mesa.getTamanho(); i++) {
             for (int j = 0; j < mesa.getTamanho(); j++) {
                 if (!mesa.getMatriz()[i][j].equals(" ")) {
@@ -128,6 +134,7 @@ public class Jogo{
     protected boolean jogadaValida(Jogada jogadaAtual){
         int x = jogadaAtual.getX();
         int y = jogadaAtual.getY();
+
         // Verificar se a jogada está dentro dos limites da matriz
         if (x < 0 || x >= mesa.getTamanho() || y < 0 || y >= mesa.getTamanho()) {
             return false;

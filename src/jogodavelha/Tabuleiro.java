@@ -3,7 +3,8 @@ package jogodavelha;
 public class Tabuleiro {
     private static final int tamanho = 3;
     private final String[][] matriz;
-    public Tabuleiro(){
+
+    public Tabuleiro() {
         matriz = new String[tamanho][tamanho];
         for(int i=0;i<tamanho;i++){
             for(int j=0;j<tamanho;j++){
@@ -11,11 +12,10 @@ public class Tabuleiro {
             }
         }
     }
-    //imprime o tabuleiro para o jogo
-    // Mais um comentario
-    public void imprimeTabuleiro()
-    {
+
+    public void imprimeTabuleiro() {
         int i;
+
         for (i = 0; i < tamanho; i++) {
             char ch = (char) (i + 65);
             System.out.print(ch + " ");
@@ -29,10 +29,11 @@ public class Tabuleiro {
         }
         System.out.println("   1   2   3");
     }
-    public void receberJogada(Jogada jogada){
-        this.matriz[jogada.getX()][jogada.getY()]= jogada.getSimbolo();
 
+    public void receberJogada(Jogada jogada) {
+        this.matriz[jogada.getX()][jogada.getY()]= jogada.getSimbolo();
     }
+
     public String[][] getMatriz() {
         return this.matriz;
     }

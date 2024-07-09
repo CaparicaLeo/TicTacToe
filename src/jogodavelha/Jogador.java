@@ -1,12 +1,12 @@
 package jogodavelha;
 
-public class Jogador implements Jogadores{
+public class Jogador implements Jogadores {
     protected String nome;
     protected String simbolo;
     protected int pontuacao;
     protected Jogada jogada;
 
-    public Jogador(String nome){
+    public Jogador(String nome) {
         this.nome = nome;
         this.pontuacao = 0;
     }
@@ -35,7 +35,7 @@ public class Jogador implements Jogadores{
         this.simbolo = simbolo;
     }
 
-    public Jogada realizarJogada(int x, int y){
+    public Jogada realizarJogada(int x, int y) {
         this.jogada = new Jogada(x,y,this.simbolo);
         return this.jogada;
     }
