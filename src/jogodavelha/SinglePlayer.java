@@ -5,23 +5,27 @@ import java.util.Random;
 
 public class SinglePlayer extends Jogo {
     private Bot computador;
-    private Jogador jogadorAtual;
 
     public SinglePlayer() {
-        this.inicializaJogadores();
-        this.inicializaJogo();
-        this.jogar();
+        do {
+            mesa = new Tabuleiro();
+            inicializaJogadores();
+            inicializaJogo();
+            jogar();
+            novamente = Console.lerChar("Jogar Novamente? (S/N): ");
+        } while (Character.toUpperCase(novamente) != 'N');
+        Principal.menu();
     }
-    @Override
+
     public void inicializaJogadores() {
         this.jogador1 = new Jogador(Console.lerString("Insira seu nome: "));
         this.computador = new Bot();
     }
-    @Override
+
     public void inicializaJogo() {
         Random random = new Random();
-        int aleatorio = random.nextInt(2) + 1;
-        if (aleatorio == 1) {
+        int aleatorio = random.nextInt(2);
+        if (aleatorio == 0) {
             this.jogador1.determinaSimbolo("X");
             this.jogadorAtual = this.jogador1;
             this.computador.determinaSimbolo("O");
@@ -31,10 +35,9 @@ public class SinglePlayer extends Jogo {
             this.jogador1.determinaSimbolo("O");
         }
     }
-    @Override
+
     public void jogar() {
         Jogada jogadaAtual;
-
         do
         {
             boolean jogadaValida;
@@ -72,55 +75,7 @@ public class SinglePlayer extends Jogo {
     }
 
     @Override
-    protected void alternarJogador() {
+    public void alternarJogador() {
         jogadorAtual = (jogadorAtual == jogador1) ? computador : jogador1;
-    }
-
-    @Override
-    public boolean vitoria() {
-        String simbolo = jogadorAtual.getSimbolo();
-        String[][] tabuleiro = mesa.getMatriz();
-
-        // Verificar linhas
-        for (int i = 0; i < mesa.getTamanho(); i++) {
-            if (tabuleiro[i][0].equals(simbolo) && tabuleiro[i][1].equals(simbolo) && tabuleiro[i][2].equals(simbolo)) {
-                return true;
-            }
-        }
-
-        // Verificar colunas
-        for (int j = 0; j < mesa.getTamanho(); j++) {
-            if (tabuleiro[0][j].equals(simbolo) && tabuleiro[1][j].equals(simbolo) && tabuleiro[2][j].equals(simbolo)) {
-                return true;
-            }
-        }
-
-        // Verificar diagonais
-        if (tabuleiro[0][0].equals(simbolo) && tabuleiro[1][1].equals(simbolo) && tabuleiro[2][2].equals(simbolo)) {
-            return true;
-        } else if (tabuleiro[0][2].equals(simbolo) && tabuleiro[1][1].equals(simbolo) && tabuleiro[2][0].equals(simbolo)) {
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean empate() {
-        return super.empate();
-    }
-
-    public boolean jogoContinua() {
-        if (vitoria()) {
-            mesa.imprimeTabuleiro();
-            System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
-            return false;
-        } else if (empate()) {
-            mesa.imprimeTabuleiro();
-            System.out.println("Empate!");
-            return false;
-        } else {
-            alternarJogador();
-            return true;
-        }
     }
 }

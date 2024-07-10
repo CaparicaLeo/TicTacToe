@@ -2,9 +2,7 @@ package jogodavelha;
 // dentro da package comando: javac Principal.java Jogador.java Jogada.java Tabuleiro.java Jogo.java
 // o executavel: java Principal.java Jogador.java Jogada.java Tabuleiro.java Jogo.java
 
-import armazenamento.*;
 import entradadados.Console;
-import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
@@ -32,7 +30,7 @@ public class Principal {
                     jogo = new SinglePlayer();
                     break;
                 case 2:
-                    jogo = new Jogo();
+                    jogo = new Multiplayer();
                     break;
                 case 3:
                     System.out.println("Pontuação a ser desenvolvida!");
@@ -42,7 +40,6 @@ public class Principal {
                     break;
                 case 5:
                     System.out.println("Saindo...");
-                    return;
             }
         } while(opcao != 5);
     }
