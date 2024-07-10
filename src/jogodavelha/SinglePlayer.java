@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class SinglePlayer extends Jogo {
     private Bot computador;
-
-    public SinglePlayer() {
+    @Override
+    public void iniciar() {
         do {
             mesa = new Tabuleiro();
             inicializaJogadores();
@@ -16,12 +16,12 @@ public class SinglePlayer extends Jogo {
         } while (Character.toUpperCase(novamente) != 'N');
         Principal.menu();
     }
-
+    @Override
     public void inicializaJogadores() {
         this.jogador1 = new Jogador(Console.lerString("Insira seu nome: "));
         this.computador = new Bot();
     }
-
+    @Override
     public void inicializaJogo() {
         Random random = new Random();
         int aleatorio = random.nextInt(2);
@@ -35,7 +35,7 @@ public class SinglePlayer extends Jogo {
             this.jogador1.determinaSimbolo("O");
         }
     }
-
+    @Override
     public void jogar() {
         Jogada jogadaAtual;
         do

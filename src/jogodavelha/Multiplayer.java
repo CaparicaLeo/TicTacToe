@@ -3,7 +3,8 @@ import entradadados.Console;
 import java.util.Random;
 
 public class Multiplayer extends Jogo {
-    public Multiplayer() {
+    @Override
+    public void iniciar() {
         do
         {
             mesa = new Tabuleiro();
@@ -14,12 +15,12 @@ public class Multiplayer extends Jogo {
         } while(Character.toUpperCase(novamente)!= 'N');
         Principal.menu();
     }
-
+    @Override
     public void inicializaJogadores() {
         jogador1 = new Jogador(Console.lerString("Insira o nome do primeiro jogador: "));
         jogador2 = new Jogador(Console.lerString("Insira o nome do segundo jogador: "));
     }
-
+    @Override
     public void inicializaJogo() {
         Random random = new Random();
         int aleatorio = random.nextInt(2) + 1;
@@ -34,7 +35,7 @@ public class Multiplayer extends Jogo {
             jogador1.determinaSimbolo("O");
         }
     }
-
+    @Override
     public void jogar() {
         boolean jogoContinua = true;
 

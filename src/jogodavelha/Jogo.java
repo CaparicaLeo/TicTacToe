@@ -69,6 +69,8 @@ public abstract class Jogo {
             return true;
         }
     }
-
-
+    protected abstract void iniciar();
+    protected abstract void inicializaJogadores();
+    protected abstract void inicializaJogo();
+    protected abstract void jogar();
 }
