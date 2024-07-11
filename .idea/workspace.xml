@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/ArmazenaJogadores" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Principal.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe",
+    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="jogodavelha" />
