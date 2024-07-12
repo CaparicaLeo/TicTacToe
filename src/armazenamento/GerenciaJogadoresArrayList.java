@@ -1,8 +1,10 @@
 package armazenamento;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import jogodavelha.Jogador;
-public class GerenciaJogadoresArrayList implements GerenciaJogadores {
+
+public class GerenciaJogadoresArrayList {
 
     private static final ArrayList<Jogador> jogadores = new ArrayList<>();
 
@@ -12,17 +14,8 @@ public class GerenciaJogadoresArrayList implements GerenciaJogadores {
     }
 
     public static void ordenarJogadores() {
-        int n = jogadores.size();
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-                // Compara a pontuação dos jogadores para ordenar em ordem decrescente
-                if (jogadores.get(j).getPontuacao() < jogadores.get(j + 1).getPontuacao()) {
-                    Jogador temp = jogadores.get(j);
-                    jogadores.set(j, jogadores.get(j + 1));
-                    jogadores.set(j + 1, temp);
-                }
-            }
-        }
+        // Ordena os jogadores por pontuação de forma decrescente
+        Collections.sort(jogadores, (j1, j2) -> Integer.compare(j2.getPontuacao(), j1.getPontuacao()));
     }
 
     public static void apresentarPontuacao() {
@@ -31,8 +24,17 @@ public class GerenciaJogadoresArrayList implements GerenciaJogadores {
         }
     }
 
-    public static ArrayList<Jogador> retornaArrayList(){
+    public static ArrayList<Jogador> retornaArrayList() {
         ordenarJogadores();
         return jogadores;
+    }
+
+    public static void carregarLista(ArrayList<String> dados) {
+        jogadores.clear(); // Limpa a lista atual de jogadores
+        for (String linha : dados) {
+            Jogador jogador = Jogador.fromString(linha);
+            jogadores.add(jogador);
+        }
+        ordenarJogadores(); // Garante que a lista esteja ordenada após o carregamento
     }
 }

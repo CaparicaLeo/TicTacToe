@@ -7,12 +7,14 @@ import armazenamento.*;
 
 public class Principal {
     public static void main(String[] args) {
+        GerenciaJogadoresArrayList.carregarLista(GerenciaJogadoresArquivos.retornarInfo());
         menu();
     }
 
     public static void menu() {
         int opcao;
         Jogo jogo;
+        GerenciaJogadoresArquivos.atualizarArquivo(GerenciaJogadoresArrayList.retornaArrayList());
         do
         {
             System.out.println("*****************");

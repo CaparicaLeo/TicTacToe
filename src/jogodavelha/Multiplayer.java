@@ -13,7 +13,6 @@ public class Multiplayer extends Jogo {
             jogar();
             novamente = Console.lerChar("Jogador novamente? (S/N): ");
         } while(Character.toUpperCase(novamente)!= 'N');
-        Principal.menu();
     }
     @Override
     public void inicializaJogadores() {
