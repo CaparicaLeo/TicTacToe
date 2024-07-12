@@ -31,4 +31,11 @@ public class Jogador implements Jogadores {
     public Jogada getJogada() {
         return jogada;
     }
+    private void setPontuacao(int p){
+        this.pontuacao = p;
+    }
+    public void pontuar(int p){
+        this.setPontuacao(this.getPontuacao()+p);
+    }
+
 }

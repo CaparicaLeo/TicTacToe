@@ -5,15 +5,13 @@ import jogodavelha.Jogador;
 public class GerenciaJogadoresArrayList implements GerenciaJogadores {
 
     private static final ArrayList<Jogador> jogadores = new ArrayList<>();
-    public void adicionarJogador(Jogador jogador) {
+
+    public static void armazenarInfo(Jogador jogador) {
         jogadores.add(jogador);
+        ordenarJogadores();
     }
 
-    public void removerJogador(Jogador jogador) {
-        jogadores.remove(jogador);
-    }
-
-    public void ordenarJogadores() {
+    public static void ordenarJogadores() {
         int n = jogadores.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
@@ -27,24 +25,14 @@ public class GerenciaJogadoresArrayList implements GerenciaJogadores {
         }
     }
 
-    @Override
-    public void apresentarPontuacao() {
+    public static void apresentarPontuacao() {
         for (Jogador jogador : jogadores) {
             System.out.println(jogador);
         }
     }
 
-    public ArrayList<Jogador> getJogadores() {
+    public static ArrayList<Jogador> retornaArrayList(){
+        ordenarJogadores();
         return jogadores;
-    }
-
-    @Override
-    public void armazenarInfo(Jogador jogador) {
-
-    }
-
-    @Override
-    public Jogador retornarInfo() {
-        return null;
     }
 }

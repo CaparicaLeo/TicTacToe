@@ -37,9 +37,7 @@ public class Multiplayer extends Jogo {
     }
     @Override
     public void jogar() {
-        boolean jogoContinua = true;
-
-        while (jogoContinua) {
+        do {
             mesa.imprimeTabuleiro();
             System.out.println("Vez do jogador: " + jogadorAtual.getNome() + " (" + jogadorAtual.getSimbolo() + ")");
 
@@ -64,20 +62,6 @@ public class Multiplayer extends Jogo {
                 }
 
             } while(!jogadaValida);
-
-            if (vitoria()) {
-                mesa.imprimeTabuleiro();
-                System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
-                jogoContinua = false;
-
-            } else if (empate()) {
-                mesa.imprimeTabuleiro();
-                System.out.println("Empate!");
-                jogoContinua = false;
-
-            } else {
-                alternarJogador();
-            }
-        }
+        }while (!jogoContinua());
     }
 }
