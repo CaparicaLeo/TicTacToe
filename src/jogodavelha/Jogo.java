@@ -1,5 +1,7 @@
 package jogodavelha;
 
+import armazenamento.GerenciaJogadoresArrayList;
+
 public abstract class Jogo {
     protected Jogador jogador1;
     protected Jogador jogador2;
@@ -59,6 +61,8 @@ public abstract class Jogo {
         if (vitoria()) {
             mesa.imprimeTabuleiro();
             System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
+            jogadorAtual.pontuar(10);
+            GerenciaJogadoresArrayList.armazenarInfo(jogadorAtual);
             return false;
         } else if (empate()) {
             mesa.imprimeTabuleiro();

@@ -6,14 +6,15 @@ import entradadados.Console;
 import armazenamento.*;
 
 public class Principal {
-    public GerenciaJogadores pontuacaoGeral;
-
     public static void main(String[] args) {
+        GerenciaJogadoresArrayList.carregarLista(GerenciaJogadoresArquivos.retornarInfo());
         menu();
     }
+
     public static void menu() {
         int opcao;
         Jogo jogo;
+        GerenciaJogadoresArquivos.atualizarArquivo(GerenciaJogadoresArrayList.retornaArrayList());
         do
         {
             System.out.println("*****************");
@@ -38,7 +39,7 @@ public class Principal {
                     jogo.iniciar();
                     break;
                 case 3:
-                    System.out.println("Pontuação a ser desenvolvida!");
+                    GerenciaJogadoresArrayList.apresentarPontuacao();
                     break;
                 case 4:
                     creditos();

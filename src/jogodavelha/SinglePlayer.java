@@ -1,4 +1,5 @@
 package jogodavelha;
+import armazenamento.GerenciaJogadoresArrayList;
 import entradadados.Console;
 
 import java.util.Random;
@@ -14,7 +15,6 @@ public class SinglePlayer extends Jogo {
             jogar();
             novamente = Console.lerChar("Jogar Novamente? (S/N): ");
         } while (Character.toUpperCase(novamente) != 'N');
-        Principal.menu();
     }
     @Override
     public void inicializaJogadores() {
@@ -71,11 +71,30 @@ public class SinglePlayer extends Jogo {
                 }
             } while(!jogadaValida);
         } while(jogoContinua());
-        Principal.menu();
     }
 
     @Override
     public void alternarJogador() {
         jogadorAtual = (jogadorAtual == jogador1) ? computador : jogador1;
+    }
+
+    @Override
+    protected boolean jogoContinua() {
+        if (vitoria()) {
+            mesa.imprimeTabuleiro();
+            System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
+            if(jogadorAtual != computador){
+                jogadorAtual.pontuar(10);
+                GerenciaJogadoresArrayList.armazenarInfo(jogadorAtual);
+            }
+            return false;
+        } else if (empate()) {
+            mesa.imprimeTabuleiro();
+            System.out.println("Empate!");
+            return false;
+        } else {
+            alternarJogador();
+            return true;
+        }
     }
 }
