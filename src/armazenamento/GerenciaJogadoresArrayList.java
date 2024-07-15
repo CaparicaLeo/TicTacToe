@@ -11,6 +11,7 @@ public class GerenciaJogadoresArrayList {
     public static void armazenarInfo(Jogador jogador) {
         jogadores.add(jogador);
         ordenarJogadores();
+        GerenciaJogadoresArquivos.atualizarArquivo(jogadores);
     }
 
     public static void ordenarJogadores() {
@@ -29,12 +30,29 @@ public class GerenciaJogadoresArrayList {
         return jogadores;
     }
 
-    public static void carregarLista(ArrayList<String> dados) {
-        jogadores.clear(); // Limpa a lista atual de jogadores
-        for (String linha : dados) {
-            Jogador jogador = Jogador.fromString(linha);
-            jogadores.add(jogador);
+    public static void carregarLista() {
+        ArrayList<String> linhas = GerenciaJogadoresArquivos.retornarInfo(); // Método que lê as linhas do arquivo e retorna uma lista de strings
+        ArrayList<Jogador> jogadores = new ArrayList<>();
+
+        for (String linha : linhas) {
+            if (linha.trim().isEmpty()) {
+                continue; // Pule linhas vazias
+            }
+
+            try {
+                Jogador jogador = Jogador.fromString(linha);
+                jogadores.add(jogador);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Erro ao processar a linha: " + linha);
+                System.out.println(e.getMessage());
+            }
         }
-        ordenarJogadores(); // Garante que a lista esteja ordenada após o carregamento
+
+        // Agora você pode usar a lista 'jogadores' como necessário
+        // Exemplo: imprimir os jogadores
+        for (Jogador jogador : jogadores) {
+            System.out.println(jogador);
+        }
     }
+
 }

@@ -12,7 +12,7 @@ public final class GerenciaJogadoresArquivos {
         armazenarInfo(jogadores);
     }
     private static void armazenarInfo(ArrayList<Jogador> jogadores) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
             for (Jogador jogador : jogadores) {
                 writer.write(jogador.toString());
                 writer.newLine();

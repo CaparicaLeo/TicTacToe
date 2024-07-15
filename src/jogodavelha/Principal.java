@@ -7,7 +7,7 @@ import armazenamento.*;
 
 public class Principal {
     public static void main(String[] args) {
-        GerenciaJogadoresArrayList.carregarLista(GerenciaJogadoresArquivos.retornarInfo());
+        GerenciaJogadoresArrayList.carregarLista();
         menu();
     }
 
