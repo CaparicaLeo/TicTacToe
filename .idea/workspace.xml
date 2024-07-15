@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" afterDir="false" />
@@ -27,6 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -38,17 +42,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Principal.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "ARMAZENAMENTO",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe",
-    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ARMAZENAMENTO&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="jogodavelha" />
