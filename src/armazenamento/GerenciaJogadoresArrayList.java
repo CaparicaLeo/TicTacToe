@@ -47,12 +47,6 @@ public class GerenciaJogadoresArrayList {
                 System.out.println(e.getMessage());
             }
         }
-
-        // Agora você pode usar a lista 'jogadores' como necessário
-        // Exemplo: imprimir os jogadores
-        for (Jogador jogador : jogadores) {
-            System.out.println(jogador);
-        }
     }
 
 }

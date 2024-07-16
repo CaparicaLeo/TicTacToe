@@ -45,7 +45,7 @@ public class SinglePlayer extends Jogo {
             {
                 if (this.jogadorAtual.getClass() == this.computador.getClass()) {
                     this.computador.realizarJogada();
-                    jogadaAtual = new Jogada(this.jogadorAtual.getJogada().getX(),this.jogadorAtual.getJogada().getY()-1, this.jogadorAtual.getSimbolo());
+                    jogadaAtual = new Jogada(this.jogadorAtual.getJogada().getX(),this.jogadorAtual.getJogada().getY(), this.jogadorAtual.getSimbolo());
                 }
                 else {
                     mesa.imprimeTabuleiro();

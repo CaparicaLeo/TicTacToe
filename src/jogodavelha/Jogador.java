@@ -21,8 +21,6 @@ public class Jogador implements Jogadores {
     public String getNome() {
         return nome;
     }
-
-
     public String getSimbolo() {
         return simbolo;
     }
