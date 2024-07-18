@@ -15,6 +15,7 @@ public class Principal {
         int opcao;
         Jogo jogo;
         GerenciaJogadoresArquivos.atualizarArquivo(GerenciaJogadoresArrayList.retornaArrayList());
+        GerenciaJogadoresArrayList.carregarLista();
         do
         {
             System.out.println("*****************");
