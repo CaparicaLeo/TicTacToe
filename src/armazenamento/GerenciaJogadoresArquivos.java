@@ -9,10 +9,7 @@ public final class GerenciaJogadoresArquivos {
     private static final String nomeArquivo = "ArmazenaJogadores.txt";
 
     public static void atualizarArquivo(ArrayList<Jogador> jogadores){
-        armazenarInfo(jogadores);
-    }
-    private static void armazenarInfo(ArrayList<Jogador> jogadores) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
             for (Jogador jogador : jogadores) {
                 writer.write(jogador.toString());
                 writer.newLine();
@@ -34,7 +31,8 @@ public final class GerenciaJogadoresArquivos {
         }
         return conteudo;
     }
-    private static void verificarArquivo() {
+
+    public static void verificarArquivo() {
         File arquivo = new File(nomeArquivo);
         if (!arquivo.exists()) {
             try {

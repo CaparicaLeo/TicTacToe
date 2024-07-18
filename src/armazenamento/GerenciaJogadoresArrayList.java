@@ -8,15 +8,28 @@ public class GerenciaJogadoresArrayList {
 
     private static final ArrayList<Jogador> jogadores = new ArrayList<>();
 
-    public static void armazenarInfo(Jogador jogador) {
-        jogadores.add(jogador);
+    public static void armazenarInfo(Jogador novoJogador) {
+        boolean jogadorExistente = false;
+
+        for (Jogador jogador : jogadores) {
+            if (jogador.getNome().equals(novoJogador.getNome())) {
+                jogador.pontuar(novoJogador.getPontuacao());
+                jogadorExistente = true;
+                break;
+            }
+        }
+
+        if (!jogadorExistente) {
+            jogadores.add(novoJogador);
+        }
+
         ordenarJogadores();
         GerenciaJogadoresArquivos.atualizarArquivo(jogadores);
     }
 
     public static void ordenarJogadores() {
         // Ordena os jogadores por pontuação de forma decrescente
-        Collections.sort(jogadores, (j1, j2) -> Integer.compare(j2.getPontuacao(), j1.getPontuacao()));
+        jogadores.sort((j1, j2) -> Integer.compare(j2.getPontuacao(), j1.getPontuacao()));
     }
 
     public static void apresentarPontuacao() {
@@ -31,8 +44,10 @@ public class GerenciaJogadoresArrayList {
     }
 
     public static void carregarLista() {
+        GerenciaJogadoresArquivos.verificarArquivo();
         ArrayList<String> linhas = GerenciaJogadoresArquivos.retornarInfo(); // Método que lê as linhas do arquivo e retorna uma lista de strings
-        ArrayList<Jogador> jogadores = new ArrayList<>();
+
+        jogadores.clear(); // Limpa a lista antes de carregar novos dados
 
         for (String linha : linhas) {
             if (linha.trim().isEmpty()) {
@@ -47,6 +62,6 @@ public class GerenciaJogadoresArrayList {
                 System.out.println(e.getMessage());
             }
         }
+        ordenarJogadores();
     }
-
 }
