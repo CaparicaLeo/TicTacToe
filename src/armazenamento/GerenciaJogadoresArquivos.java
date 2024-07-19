@@ -12,14 +12,20 @@ import jogodavelha.Jogador;
 public final class GerenciaJogadoresArquivos {
 
     private static final String nomeArquivo = "ArmazenaJogadores.txt";
-
     /**
      * Atualiza o arquivo com a lista de jogadores fornecida.
      *
      * @param jogadores Lista de jogadores a serem armazenados no arquivo.
      */
-    public static void atualizarArquivo(ArrayList<Jogador> jogadores) {
-        armazenarInfo(jogadores);
+     public static void atualizarArquivo(ArrayList<Jogador> jogadores){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
+            for (Jogador jogador : jogadores) {
+                writer.write(jogador.toString());
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
+        }
     }
 
     /**
@@ -30,14 +36,8 @@ public final class GerenciaJogadoresArquivos {
      */
     private static void armazenarInfo(ArrayList<Jogador> jogadores) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
-            for (Jogador jogador : jogadores) {
-                writer.write(jogador.toString());
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            System.err.println("Erro ao escrever no arquivo: " + e.getMessage());
-        }
-    }
+=======
+   
 
     /**
      * Retorna as informações dos jogadores armazenadas no arquivo.
@@ -57,7 +57,6 @@ public final class GerenciaJogadoresArquivos {
         }
         return conteudo;
     }
-
     /**
      * Verifica se o arquivo existe e, caso não exista, cria um novo arquivo.
      *

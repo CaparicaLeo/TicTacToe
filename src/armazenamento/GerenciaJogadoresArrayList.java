@@ -12,14 +12,25 @@ import jogodavelha.Jogador;
 public class GerenciaJogadoresArrayList {
 
     private static final ArrayList<Jogador> jogadores = new ArrayList<>();
-
     /**
      * Armazena as informações de um jogador na lista e atualiza o arquivo.
      *
      * @param jogador O jogador a ser armazenado.
      */
-    public static void armazenarInfo(Jogador jogador) {
-        jogadores.add(jogador);
+    public static void armazenarInfo(Jogador novoJogador) {
+        boolean jogadorExistente = false;
+
+        for (Jogador jogador : jogadores) {
+            if (jogador.getNome().equals(novoJogador.getNome())) {
+                jogador.pontuar(novoJogador.getPontuacao());
+                jogadorExistente = true;
+                break;
+            }
+        }
+
+        if (!jogadorExistente) {
+            jogadores.add(novoJogador);
+        }
         ordenarJogadores();
         GerenciaJogadoresArquivos.atualizarArquivo(jogadores);
     }
@@ -28,7 +39,8 @@ public class GerenciaJogadoresArrayList {
      * Ordena os jogadores por pontuação de forma decrescente.
      */
     public static void ordenarJogadores() {
-        Collections.sort(jogadores, (j1, j2) -> Integer.compare(j2.getPontuacao(), j1.getPontuacao()));
+        // Ordena os jogadores por pontuação de forma decrescente
+        jogadores.sort((j1, j2) -> Integer.compare(j2.getPontuacao(), j1.getPontuacao()));
     }
 
     /**
@@ -54,8 +66,10 @@ public class GerenciaJogadoresArrayList {
      * Carrega a lista de jogadores a partir das informações armazenadas no arquivo.
      */
     public static void carregarLista() {
+        GerenciaJogadoresArquivos.verificarArquivo();
         ArrayList<String> linhas = GerenciaJogadoresArquivos.retornarInfo(); // Método que lê as linhas do arquivo e retorna uma lista de strings
         ArrayList<Jogador> jogadoresTemp = new ArrayList<>();
+        jogadores.clear(); // Limpa a lista antes de carregar novos dados
 
         for (String linha : linhas) {
             if (linha.trim().isEmpty()) {

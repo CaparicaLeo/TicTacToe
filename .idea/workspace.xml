@@ -17,6 +17,10 @@
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +57,9 @@
     &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;javadoc&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bototimizado&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lukas/BCC/POO1/TicTacToe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java&quot;
   }
 }</component>

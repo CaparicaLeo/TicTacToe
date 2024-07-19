@@ -31,6 +31,7 @@ public class Principal {
         Jogo jogo;
         GerenciaJogadoresArquivos.atualizarArquivo(GerenciaJogadoresArrayList.retornaArrayList());
         do {
+        GerenciaJogadoresArrayList.carregarLista();
             System.out.println("*****************");
             System.out.println("*               *");
             System.out.println("* JOGO DA VELHA *");
