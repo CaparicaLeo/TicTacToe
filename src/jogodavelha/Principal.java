@@ -1,23 +1,37 @@
 package jogodavelha;
-// dentro da package comando: javac Principal.java Jogador.java Jogada.java Tabuleiro.java Jogo.java
-// o executavel: java Principal.java Jogador.java Jogada.java Tabuleiro.java Jogo.java
 
 import entradadados.Console;
 import armazenamento.*;
 
+/**
+ * Classe principal do jogo da velha.
+ * Esta classe contém o método main que inicia o jogo e o menu de opções.
+ *
+ * @version 1.0
+ */
 public class Principal {
+
+    /**
+     * Método principal que inicia a execução do programa.
+     *
+     * @param args Argumentos da linha de comando.
+     */
     public static void main(String[] args) {
         GerenciaJogadoresArrayList.carregarLista();
         menu();
     }
 
+    /**
+     * Exibe o menu principal do jogo e gerencia as opções selecionadas pelo usuário.
+     *
+     * @exception Exception se ocorrer um erro durante a execução.
+     */
     public static void menu() {
         int opcao;
         Jogo jogo;
         GerenciaJogadoresArquivos.atualizarArquivo(GerenciaJogadoresArrayList.retornaArrayList());
+        do {
         GerenciaJogadoresArrayList.carregarLista();
-        do
-        {
             System.out.println("*****************");
             System.out.println("*               *");
             System.out.println("* JOGO DA VELHA *");
@@ -55,18 +69,23 @@ public class Principal {
         } while(opcao != 5);
     }
 
+    /**
+     * Exibe os créditos do jogo.
+     *
+     * @exception Exception se ocorrer um erro durante a execução.
+     */
     public static void creditos() {
         int op;
         System.out.println("JOGO DA VELHA");
         System.out.println("Criado por Lucas Machado Cogrossi");
         System.out.println("                &                ");
         System.out.println("Leonardo Brzezinski Caparica de Almeida\n");
-        do{
+        do {
             op = Console.lerInt("Pressione 1 para sair: ");
-            if(op!=1){
+            if(op != 1) {
                 System.out.println("\nOPCAO INVALIDA!\n");
             }
-        }while(op!= 1);
+        } while(op != 1);
     }
 
 }

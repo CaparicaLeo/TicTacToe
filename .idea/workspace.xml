@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entradadados/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entradadados/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/SinglePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Tabuleiro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />

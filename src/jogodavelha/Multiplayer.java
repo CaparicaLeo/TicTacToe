@@ -1,24 +1,42 @@
 package jogodavelha;
+
 import entradadados.Console;
 import java.util.Random;
 
+/**
+ * Classe que representa o modo multiplayer do jogo da velha.
+ *
+ * @version 1.0
+ */
 public class Multiplayer extends Jogo {
+
+    /**
+     * Inicia o jogo multiplayer.
+     * O jogo continua até que os jogadores decidam não jogar novamente.
+     */
     @Override
     public void iniciar() {
-        do
-        {
+        do {
             mesa = new Tabuleiro();
             inicializaJogadores();
             inicializaJogo();
             jogar();
-            novamente = Console.lerChar("Jogador novamente? (S/N): ");
-        } while(Character.toUpperCase(novamente)!= 'N');
+            novamente = Console.lerChar("Jogar novamente? (S/N): ");
+        } while(Character.toUpperCase(novamente) != 'N');
     }
+
+    /**
+     * Inicializa os jogadores para o modo multiplayer.
+     */
     @Override
     public void inicializaJogadores() {
         jogador1 = new Jogador(Console.lerString("Insira o nome do primeiro jogador: "));
         jogador2 = new Jogador(Console.lerString("Insira o nome do segundo jogador: "));
     }
+
+    /**
+     * Inicializa o jogo definindo símbolos para os jogadores de forma aleatória.
+     */
     @Override
     public void inicializaJogo() {
         Random random = new Random();
@@ -34,6 +52,10 @@ public class Multiplayer extends Jogo {
             jogador1.determinaSimbolo("O");
         }
     }
+
+    /**
+     * Executa a lógica do jogo, alternando entre os jogadores e verificando as jogadas.
+     */
     @Override
     public void jogar() {
         do {
@@ -41,8 +63,7 @@ public class Multiplayer extends Jogo {
             System.out.println("Vez do jogador: " + jogadorAtual.getNome() + " (" + jogadorAtual.getSimbolo() + ")");
 
             boolean jogadaValida;
-            do
-            {
+            do {
                 char linha = Console.lerChar("Insira a linha (A-C): ");
                 if (Character.isLowerCase(linha)) {
                     linha = Character.toUpperCase(linha);
@@ -59,8 +80,7 @@ public class Multiplayer extends Jogo {
                 } else {
                     mesa.receberJogada(jogadaAtual);
                 }
-
-            } while(!jogadaValida);
-        }while (!jogoContinua());
+            } while (!jogadaValida);
+        } while (!jogoContinua());
     }
 }

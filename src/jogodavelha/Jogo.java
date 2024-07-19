@@ -2,6 +2,12 @@ package jogodavelha;
 
 import armazenamento.GerenciaJogadoresArrayList;
 
+/**
+ * Classe abstrata que representa o jogo da velha.
+ * Define métodos e propriedades comuns para jogos single player e multiplayer.
+ *
+ * @version 1.0
+ */
 public abstract class Jogo {
     protected Jogador jogador1;
     protected Jogador jogador2;
@@ -9,14 +15,23 @@ public abstract class Jogo {
     protected Tabuleiro mesa;
     protected char novamente;
 
+    /**
+     * Alterna o jogador atual.
+     */
     protected void alternarJogador() {
         jogadorAtual = (jogadorAtual == jogador1) ? jogador2 : jogador1;
     }
-    protected boolean vitoria(){
+
+    /**
+     * Verifica se o jogador atual venceu o jogo.
+     *
+     * @return true se o jogador atual venceu, false caso contrário.
+     */
+    protected boolean vitoria() {
         String simbolo = jogadorAtual.getSimbolo();
         String[][] tabuleiro = mesa.getMatriz();
 
-            // Verificar linhas
+        // Verificar linhas
         for (int i = 0; i < mesa.getTamanho(); i++) {
             if (tabuleiro[i][0].equals(simbolo) && tabuleiro[i][1].equals(simbolo) && tabuleiro[i][2].equals(simbolo)) {
                 return true;
@@ -36,6 +51,12 @@ public abstract class Jogo {
         }
         return false;
     }
+
+    /**
+     * Verifica se o jogo terminou em empate.
+     *
+     * @return true se o jogo terminou em empate, false caso contrário.
+     */
     protected boolean empate() {
         int count = 0;
         for (int i = 0; i < mesa.getTamanho(); i++) {
@@ -47,7 +68,14 @@ public abstract class Jogo {
         }
         return count == 9;
     }
-    protected boolean jogadaValida(Jogada jogadaAtual){
+
+    /**
+     * Verifica se a jogada atual é válida.
+     *
+     * @param jogadaAtual A jogada a ser verificada.
+     * @return true se a jogada é válida, false caso contrário.
+     */
+    protected boolean jogadaValida(Jogada jogadaAtual) {
         int x = jogadaAtual.getX();
         int y = jogadaAtual.getY();
 
@@ -57,7 +85,13 @@ public abstract class Jogo {
         }
         return mesa.getMatriz()[x][y].equals(" ");
     }
-    protected boolean jogoContinua(){
+
+    /**
+     * Verifica se o jogo deve continuar.
+     *
+     * @return true se o jogo deve continuar, false caso contrário.
+     */
+    protected boolean jogoContinua() {
         if (vitoria()) {
             mesa.imprimeTabuleiro();
             System.out.println("Jogador " + jogadorAtual.getNome() + " venceu!");
@@ -73,8 +107,28 @@ public abstract class Jogo {
             return true;
         }
     }
+
+    /**
+     * Método abstrato para iniciar o jogo.
+     * Deve ser implementado pelas classes filhas.
+     */
     protected abstract void iniciar();
+
+    /**
+     * Método abstrato para inicializar os jogadores.
+     * Deve ser implementado pelas classes filhas.
+     */
     protected abstract void inicializaJogadores();
+
+    /**
+     * Método abstrato para inicializar o jogo.
+     * Deve ser implementado pelas classes filhas.
+     */
     protected abstract void inicializaJogo();
+
+    /**
+     * Método abstrato para realizar a jogada.
+     * Deve ser implementado pelas classes filhas.
+     */
     protected abstract void jogar();
 }
