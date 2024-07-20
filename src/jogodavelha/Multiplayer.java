@@ -81,6 +81,6 @@ public class Multiplayer extends Jogo {
                     mesa.receberJogada(jogadaAtual);
                 }
             } while (!jogadaValida);
-        } while (!jogoContinua());
+        } while (jogoContinua());
     }
 }
