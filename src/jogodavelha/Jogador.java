@@ -5,13 +5,12 @@ package jogodavelha;
  *
  * @version 1.0
  */
-public class Jogador implements Jogadores {
+public class Jogador{
 
-    protected String nome;
-    protected String simbolo;
-    protected int pontuacao;
-    protected Jogada jogada;
-
+    private final String nome;
+    private String simbolo;
+    private int pontuacao;
+    private Jogada jogada;
     /**
      * Construtor da classe Jogador.
      *
@@ -75,7 +74,7 @@ public class Jogador implements Jogadores {
      * @return A jogada realizada pelo jogador.
      */
     public Jogada getJogada() {
-        return jogada;
+        return this.jogada;
     }
 
     /**

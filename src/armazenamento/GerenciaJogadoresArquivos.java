@@ -5,19 +5,18 @@ import java.util.ArrayList;
 import jogodavelha.Jogador;
 
 /**
- * Classe responsável por gerenciar o armazenamento de jogadores em arquivo.
- *
- * @version 1.0
+ * Classe responsável por gerenciar a leitura e escrita de jogadores em um arquivo.
  */
 public final class GerenciaJogadoresArquivos {
 
     private static final String nomeArquivo = "ArmazenaJogadores.txt";
+
     /**
      * Atualiza o arquivo com a lista de jogadores fornecida.
      *
-     * @param jogadores Lista de jogadores a serem armazenados no arquivo.
+     * @param jogadores Lista de jogadores a serem salvos no arquivo.
      */
-     public static void atualizarArquivo(ArrayList<Jogador> jogadores){
+    public static void atualizarArquivo(ArrayList<Jogador> jogadores){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo))) {
             for (Jogador jogador : jogadores) {
                 writer.write(jogador.toString());
@@ -29,21 +28,9 @@ public final class GerenciaJogadoresArquivos {
     }
 
     /**
-     * Armazena a lista de jogadores no arquivo.
+     * Retorna o conteúdo do arquivo como uma lista de strings.
      *
-     * @param jogadores Lista de jogadores a serem armazenados.
-     * @exception IOException se ocorrer um erro ao escrever no arquivo.
-     */
-    private static void armazenarInfo(ArrayList<Jogador> jogadores) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nomeArquivo, true))) {
-=======
-   
-
-    /**
-     * Retorna as informações dos jogadores armazenadas no arquivo.
-     *
-     * @return Lista de strings contendo as informações dos jogadores.
-     * @exception IOException se ocorrer um erro ao ler o arquivo.
+     * @return Lista de strings com o conteúdo do arquivo.
      */
     public static ArrayList<String> retornarInfo() {
         ArrayList<String> conteudo = new ArrayList<>();
@@ -55,14 +42,14 @@ public final class GerenciaJogadoresArquivos {
         } catch (IOException e) {
             System.err.println("Erro ao ler o arquivo: " + e.getMessage());
         }
+        System.out.println("Conteúdo lido do arquivo: " + conteudo);
         return conteudo;
     }
+
     /**
      * Verifica se o arquivo existe e, caso não exista, cria um novo arquivo.
-     *
-     * @exception IOException se ocorrer um erro ao criar o arquivo.
      */
-    private static void verificarArquivo() {
+    public static void verificarArquivo() {
         File arquivo = new File(nomeArquivo);
         if (!arquivo.exists()) {
             try {

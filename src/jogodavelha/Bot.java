@@ -7,7 +7,7 @@ import java.util.Random;
  *
  * @version 1.0
  */
-public class Bot extends Jogador implements Jogadores {
+public class Bot extends Jogador {
 
     private final String nome = "Robo";
     private String simbolo;

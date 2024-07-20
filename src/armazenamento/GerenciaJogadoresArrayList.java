@@ -1,7 +1,6 @@
 package armazenamento;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import jogodavelha.Jogador;
 
 /**
@@ -15,7 +14,7 @@ public class GerenciaJogadoresArrayList {
     /**
      * Armazena as informações de um jogador na lista e atualiza o arquivo.
      *
-     * @param jogador O jogador a ser armazenado.
+     * @param novoJogador O jogador a ser armazenado.
      */
     public static void armazenarInfo(Jogador novoJogador) {
         boolean jogadorExistente = false;
