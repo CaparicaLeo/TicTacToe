@@ -1,6 +1,6 @@
 ### TODO LIST
 
-- [ ] Diagrama de Classes
+- ✅ Diagrama de Classes
 - [ ] Tratamento de Exceções com no minimo duas!
 - ✅ Criação da Classe Console
 - ✅ Metodo para jogar novamente
