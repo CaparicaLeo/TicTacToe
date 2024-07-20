@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="editable-svg" />
       </list>
     </option>
   </component>
@@ -44,10 +44,17 @@
     "Application.Principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "fixes",
+    "git-widget-placeholder": "diagrama-classes",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/lukas/BCC/POO1/TicTacToe",
-    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
+    "last_opened_file_path": "/home/lukas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,6 +82,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -83,6 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719508170807</updated>
+      <workItem from="1721499238259" duration="1954000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -102,6 +118,9 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -130,5 +149,9 @@
         <watch expression="scanner" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
