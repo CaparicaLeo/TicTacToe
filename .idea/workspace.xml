@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_06_2024_19_44__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArquivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/armazenamento/GerenciaJogadoresArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Jogador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Jogadores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogodavelha/Multiplayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +44,9 @@
     "Application.Principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "limpandoCode",
+    "git-widget-placeholder": "fixes",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/lucascogrossi/BCC/3semestre/POO1/TicTacToe",
+    "last_opened_file_path": "/home/lukas/BCC/POO1/TicTacToe",
     "onboarding.tips.debug.path": "C:/Users/Pardal/Faculdade/Jogo Da Velha/TicTacToe/src/Main.java"
   }
 }]]></component>
