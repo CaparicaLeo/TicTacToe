@@ -6,6 +6,6 @@
 - X Metodo para jogar novamente
 - X Todo o Package armazenamento
 - X Criar a funcionalidade extra, vulgo BOT
-- [ ] Documentação
+- X Documentação
       
 
