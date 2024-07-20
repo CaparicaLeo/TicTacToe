@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArmazenaJogadores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ArmazenaJogadores.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entradadados/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entradadados/Console.java" afterDir="false" />
-    </list>
+    <list default="true" id="4c28c69c-dfc5-4823-90fd-6a001821e6b5" name="Changes" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +43,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/lukas/BCC/POO1/TicTacToe",
+    "last_opened_file_path": "/home/lukas/TicTacToe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,6 +97,7 @@
       <updated>1719508170807</updated>
       <workItem from="1721499238259" duration="1954000" />
       <workItem from="1721510119492" duration="481000" />
+      <workItem from="1721514316815" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
